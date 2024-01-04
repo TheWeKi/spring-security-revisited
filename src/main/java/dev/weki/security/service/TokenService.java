@@ -33,7 +33,7 @@ public class TokenService {
                 .issuer("admin")
                 .issuedAt(Instant.now())
                 .subject(authentication.getName())
-                .expiresAt(Instant.now().plus(1, ChronoUnit.HOURS))
+                .expiresAt(Instant.now().plus(15, ChronoUnit.MINUTES))
                 .claim("scope", scopes)
                 .build();
 
